@@ -92,3 +92,15 @@
     background-color: grey;
     border-radius: 12px;
 }
+
+.ladding-hero--top{
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-hero__video{
+    height: 645px;
+    width: 100%;
+    position: absolute;
+    bottom: -80px;
+}
