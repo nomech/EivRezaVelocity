@@ -82,7 +82,7 @@
 .landing-main{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 80px;
     padding: 64px;
 }
 
@@ -159,9 +159,18 @@
     z-index: -2;
 }
 
+.landing-customization__title{
+    font-size: 48px;
+}
+
+.løanding-customization__text{
+    font-size: 24px;
+    font-weight: 500;
+}
+
 .landing-customization__options {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 24px;
 }
@@ -175,8 +184,12 @@
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background-image: url("../assets/images/Prøvekjøring.png");
+    background-image: url(" ../assets/images/Prøvekjøring.png");
     background-position: center;
     background-size: cover;
     z-index: -1;
+}
+
+.landing-customization__picture {
+    width: 500px;
 }
