@@ -120,7 +120,7 @@ main {
 }
 
 
-.order-section__summary, .order-section {
+.order-section__summary{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -139,5 +139,5 @@ main {
 
 .button:hover {
     background-color: grey;
-    color: #ffffff;
+    color: #fff;
 }
