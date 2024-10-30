@@ -119,9 +119,25 @@
     margin-left: 40px;
 }
 
+.lading-cta {
+    display: flex;
+    gap: 24px;
+    margin-top: 50px;
+}   
+
 .landing-hero__button {
+    padding: 24px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
     
 }
+
 
 .ladding-hero--top::before {
     content: "";
@@ -136,9 +152,9 @@
   }
 
 .landing-hero__video{
-    height: 645px;
+    height: 1000px;
     width: 100%;
     position: absolute;
-    bottom: -80px;
+    bottom: -175px;
     z-index: -2;
 }
