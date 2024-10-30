@@ -78,3 +78,17 @@
     text-decoration: underline;
     color: #000000;
 }
+
+.landing-main{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 64px;
+}
+
+.landing-hero, .landing-customization{
+    height: 450px;
+    width: 100%;
+    background-color: grey;
+    border-radius: 12px;
+}
