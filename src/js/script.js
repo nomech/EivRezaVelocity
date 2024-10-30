@@ -95,7 +95,13 @@ const submitAnswer = () => {
     orderSection.appendChild(orderSummary);
     customData.forEach((data) => {
         const selectedAnswer = document.createElement('p');
-        selectedAnswer.innerText = `${data.option}: ${data.answer[data.selected]}`;
+        selectedAnswer.className = 'order-section__answer';
+        selectedAnswer.innerText = `${data.answer[data.selected]}`;
+        
+        const selectedTitle = document.createElement('h3');
+        selectedTitle.className = 'order-section__option';
+        selectedTitle.innerText = data.option;
+        orderSummary.appendChild(selectedTitle);
         orderSummary.appendChild(selectedAnswer);
     });
     const orderButton = document.createElement('button');
