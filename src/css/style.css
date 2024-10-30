@@ -158,3 +158,25 @@
     bottom: -175px;
     z-index: -2;
 }
+
+.landing-customization__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.landing-customization__picture{
+    border-radius: 12px;
+}
+.landing-hero--test{
+    content: "";
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url("../assets/images/Prøvekjøring.png");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
