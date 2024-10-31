@@ -137,9 +137,13 @@
     font-size: 22px;
     text-decoration: none;
     color: #000000;
+    border: 2px solid #ffffff;
     
 }
-
+.landing-hero__button--transparent{
+    background-color: #ffffff7e;   
+    border: 2px solid #ffffff;
+}
 
 .ladding-hero--top::before {
     content: "";
