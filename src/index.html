@@ -4,51 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <title>RezaEiv-MNotors</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header class="landing-header">
-        <nav class="landing-nav">
-            <h1 class="landing-logo"><img src="assets/images/image 1 (1).png" alt=""></h1>
-            <ul class="landing-list">
-                <li class="landing-item"><a href="" class="landing-link">Our Products</a></li>
-                <li class="landing-item"><a href="#" class="landing-link">About</a></li>
-                <li class="landing-item"><a href="./pages/order.html" class="landing-link">Buy now</a></li>
+        <nav class="landing-header__nav">
+            <h1 class="landing-header__logo">
+                <img src="assets/images/logo.png" alt="">
+            </h1>
+            <ul class="landing-header__list">
+                <li class="landing-header__item">
+                    <a href="" class="landing-header__link">Our Products</a>
+                </li>
+                <li class="landing-header__item">
+                    <a href="#" class="landing-header__link">About</a>
+                </li>
+                <li class="landing-header__item">
+                    <a href="./pages/order.html" class="landing-header__link">Buy now</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main class="landing-main">
-        <section class="landing-hero ladding-hero--top">
+        <section class="landing-hero landing-hero--top">
             <div class="landing-hero__overlay">
-                <h2 class="ladning-hero__title">EivReza Velocity</h2>
-                <p class="lading-hero__text">Experience the future of driving</p>
-                <div class="lading-cta">
+                <h2 class="landing-hero__title">EivReza Velocity</h2>
+                <p class="landing-hero__text">Experience the future of driving</p>
+                <div class="landing-hero__cta">
                     <a href="./pages/order.html" class="landing-hero__button">Buy now</a>
                     <a href="#" class="landing-hero__button landing-hero__button--transparent">Browse pictures</a>
                 </div>
             </div>
             <video class="landing-hero__video" autoplay loop muted>
-                <source src="assets/video/intro.mov" type="video/mp4">
+                <source src="./assets/video/intro.mov" type="video/mp4">
             </video>
         </section>
         <section class="landing-customization">
             <h2 class="landing-customization__title">Customize your car for your specific needs</h2>
             <p class="landing-customization__text"></p>
             <div class="landing-customization__options">
-                <img src="./assets/images/Car Spectacular by Rishab Lamichhane 1 (1).png" alt=""
-                    class="landing-customization__picture">
-                <img src="./assets/images/Car Photo by Scott Webb 1.png" alt="" class="landing-customization__picture">
-                <img src="./assets/images/Car by Tommy Krombacher 1.png" alt="" class="landing-customization__picture">
-                <img src="./assets/images/Car by Jaddy Liu 1.png" alt="" class="landing-customization__picture">
-
-            </div>
-
+                <div class="landing-customization__option">
+                    <img src="./assets/images/Car Spectacular by Rishab Lamichhane 1 (1).png" alt=""
+                        class="landing-customization__picture">
+                    <h3 class="landing-customization__text">Petrol</h3>
+                </div>
+                <div class="landing-customization__option">
+                    <img src="./assets/images/Car Photo by Scott Webb 1.png" alt=""
+                        class="landing-customization__picture">
+                    <h3 class="landing-customization__text">Diesel</h3>
+                </div>
+                <div class="landing-customization__option">
+                    <img src="./assets/images/Car by Tommy Krombacher 1.png" alt=""
+                        class="landing-customization__picture">
+                    <h3 class="landing-customization__text">Electric</h3>
+                </div>
+                <div class="landing-customization__option">
+                    <img src="./assets/images/Car by Jaddy Liu 1.png" alt="" class="landing-customization__picture">
+                    <h3 class="landing-customization__text">Hybrid</h3>
+                </div>
             </div>
         </section>
-        <section class="landing-hero landing-hero--test">
-
+        <section class="landing-hero landing-hero--bottom">
+            <img src="./assets/images/testdrive.jpg" alt="" class="landing-hero__image">
+            <div class="landing-hero__overlay">
+                <h2 class="landing-hero__title">Order Test Drive</h2>
+                <p class="landing-hero__text">
+                    Feel the thrill of driving an EivReza Velocity. Book a test drive now and experience true power and
+                    precision on the road.
+                </p>
+                <a href="#" class="landing-hero__button landing-hero__button--testdrive">Test drive</a>
+            </div>
         </section>
     </main>
 </body>

@@ -1,13 +1,22 @@
-/* This file contains standardized sizes */
-/* this file resetes and sets default values globally */
 
-/* This file contains all the fonts, I've opted to use them locally since using google fonts will make the site breach GDPR */
-/* Source:https://thehackernews.com/2022/01/german-court-rules-websites-embedding.html */
-/* https://rewis.io/urteile/urteil/lhm-20-01-2022-3-o-1749320/ */
-/* LG München, Urteil vom 20.01.2022, Az. 3 O 17493/20 (REWIS RS 2022, 1892)*/
-
-@import "./_fonts.css";
-@font-face {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main {
+    max-width: 1900px;
+  }
+  
+  @font-face {
     font-family: "Roboto";
     src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
     font-weight: 300;
@@ -41,111 +50,128 @@
     font-weight: 400;
     font-style: normal;
   }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
-
-.landing-header {
+  
+  .landing-header {
     background-color: #efeeee;
     padding: 36px 88px;
     font-size: 28px;
-}
-
-.landing-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.landing-list {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  gap:92px;
-  font-weight: 500;
-}
-
-.landing-link {
+    width: 100%;
+  }
+  
+  .landing-header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .landing-header__list {
+    display: flex;
+    list-style: none;
+    gap: 92px;
+    font-weight: 500;
+  }
+  
+  .landing-header__link {
     text-decoration: none;
     color: #000000;
-}
-
-.landing-link:hover {
+  }
+  
+  .landing-header__link:hover {
     text-decoration: underline;
-    color: #000000;
-}
+  }
+  
 
-.landing-main{
+  .landing-main {
     display: flex;
     flex-direction: column;
     gap: 80px;
     padding: 64px;
-}
-
-.landing-hero, .landing-customization{
-    height: 450px;
+  }
+  
+  .landing-hero{
     width: 100%;
     border-radius: 12px;
-}
+    height: 450px;
+  }
 
-.ladning-hero__title{
+  .landing-customization {
+    /* position: relative; */
+    height: 400px;
+  }
+
+  
+  .landing-hero__title {
     font-size: 50px;
     font-weight: bold;
-}
-
-.lading-hero__text{
+  }
+  
+  .landing-hero__text {
     font-size: 24px;
     font-weight: 500;
-}
-
-.ladding-hero--top{
+  }
+  
+  .landing-hero--top,
+  .landing-hero--bottom {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;;
     position: relative;
     overflow: hidden;
     color: #ffffff;
-}
-
-.landing-hero__overlay {
+  }
+  
+  .landing-hero--top {
+    gap: 12px;
+  }
+  
+  .landing-hero__overlay {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-left: 40px;
-}
-
-.lading-cta {
+  }
+  
+  .landing-hero__cta {
     display: flex;
     gap: 24px;
     margin-top: 50px;
-}   
-
-.landing-hero__button {
+  }
+  
+  .landing-hero__button {
     padding: 24px;
     height: 50px;
     border-radius: 12px;
     background-color: #ffffff;
-    border: none;
+    border: 2px solid #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 22px;
     text-decoration: none;
     color: #000000;
-    border: 2px solid #ffffff;
-    
-}
-.landing-hero__button--transparent{
-    background-color: #ffffff7e;   
-    border: 2px solid #ffffff;
-}
-
-.ladding-hero--top::before {
+  }
+  
+  .landing-hero__button--transparent {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .landing-hero__video {
+    height: 850px;
+    width: 100%;
+    position: absolute;
+    bottom: -175px;
+    z-index: -2;
+  }
+  
+  .landing-hero__image {
+    width: 100%;
+    position: absolute;
+    bottom: -230px;
+    z-index: -2;
+  }
+  
+  .landing-hero--top::before,
+  .landing-hero--bottom::before {
     content: "";
     position: absolute;
     top: -10px;
@@ -156,46 +182,68 @@
     opacity: 0.3;
     z-index: -1;
   }
-
-.landing-hero__video{
-    height: 1000px;
-    width: 100%;
-    position: absolute;
-    bottom: -175px;
-    z-index: -2;
-}
-
-.landing-customization__title{
+  
+  .landing-hero--bottom::before {
+    opacity: 0.5;
+  }
+  
+  .landing-hero--bottom .landing-hero__overlay {
+    width: 450px;
+    font-size: 26px;
+  }
+  
+  .landing-hero__button--testdrive {
+    width: 190px;
+    margin-top: 32px;
+  }
+  
+  .landing-customization__title {
     font-size: 48px;
-}
-
-.løanding-customization__text{
+  }
+  
+  .landing-customization__text {
+    left: 120px;
     font-size: 24px;
     font-weight: 500;
-}
-
-.landing-customization__options {
+    position: absolute;
+    top: 150px;
+    color: #ffffff;
+  }
+  
+  .landing-customization__options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
-}
+  }
 
-.landing-customization__picture{
-    border-radius: 12px;
-}
-.landing-hero--test{
+  .landing-customization__option::before {
     content: "";
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background-image: url(" ../assets/images/Prøvekjøring.png");
-    background-position: center;
-    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 4px;
+    background-color: black;
+    opacity: 0.4;
     z-index: -1;
-}
+    border-radius: 12px;
+  }
 
-.landing-customization__picture {
-    width: 500px;
-}
+  .landing-customization__option {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .landing-customization__option > img {
+    z-index: -2;
+    position: relative;
+  }
+
+
+  
+  .landing-customization__picture {
+    border-radius: 12px;
+  }
+  

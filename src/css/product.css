@@ -57,30 +57,29 @@ main {
   background-color: #efeeee;
   padding: 36px 88px;
   font-size: 28px;
+  width: 100%;
 }
 
-.landing-nav {
+.landing-header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.landing-list {
+.landing-header__list {
   display: flex;
-  justify-content: flex-end;
   list-style: none;
   gap: 92px;
   font-weight: 500;
 }
 
-.landing-link {
+.landing-header__link {
   text-decoration: none;
   color: #000000;
 }
 
-.landing-link:hover {
+.landing-header__link:hover {
   text-decoration: underline;
-  color: #000000;
 }
 
 .order-section{
