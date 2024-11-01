@@ -61,7 +61,7 @@ const orderImage = document.querySelector(".order-section__image");
 orderImage.src = customData[currentQuestion].image;
 option.innerText = customData[currentQuestion].option;
 option.className = "order-section__option";
-orderForm.appendChild(option);
+orderForm.before(option);
 
 customData[currentQuestion].answer.forEach((data, index) => {
   const inputField = createInputElement(
@@ -112,9 +112,11 @@ nextButton.addEventListener("click", () => {
 const submitAnswer = () => {
   const orderSection = document.querySelector(".order-section");
   orderSection.innerHTML = "";
+  
   const orderSummary = document.createElement("div");
   orderSummary.className = "order-section__summary";
   orderSection.appendChild(orderSummary);
+
   customData.forEach((data) => {
     const selectedAnswer = document.createElement("p");
     selectedAnswer.className = "order-section__answer";
