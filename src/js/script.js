@@ -1,37 +1,69 @@
 const customData = [
   {
     option: "Fuel type",
-    answer: ["Petrol", "Diesel", "Electric", "Hybrid"],
+    answer: [
+      {
+        type: "Petrol",
+        price: 30000,
+      },
+      {
+        type: "Diesel",
+        price: 40000,
+      },
+      {
+        type: "Electric",
+        price: 50000,
+      },
+      {
+        type: "Hybrid",
+        price: 60000,
+      },
+    ],
     image: "../assets/images/step1.png",
-    selected: null,
+    selected: { type: null, price: null },
   },
   {
     option: "Engine size",
-    answer: ["350hp", "450hp", "600hp"],
+    answer: [
+      { type: "350hp", price: 30000 },
+      { type: "500hp", price: 40000 },
+      { type: "750hp", price: 50000 },
+    ],
     image: "../assets/images/step2.png",
-    selected: null,
+    selected: { type: null, price: null },
   },
   {
     option: "Transmission",
-    answer: ["Automatic", "Manual"],
+    answer: [
+      { type: "Manual", price: 30000 },
+      { type: "Automatic", price: 40000 },
+    ],
     image: "../assets/images/step3.png",
-    selected: null,
+    selected: { type: null, price: null },
   },
   {
     option: "Color",
-    answer: ["Red", "Blue", "Black", "White"],
+    answer: [
+      { type: "Red", price: 30000 },
+      { type: "Blue", price: 40000 },
+      { type: "Black", price: 50000 },
+    ],
     image: "../assets/images/step4.png",
-    selected: null,
+    selected: { type: null, price: null },
   },
   {
     option: "Interior",
-    answer: ["White lather", "Red Synthetic leather", "Black fabric"],
+    answer: [
+      { type: "Leather", price: 30000 },
+      { type: "Fabric", price: 40000 },
+    ],
     image: "../assets/images/step5.png",
-    selected: null,
+    selected: { type: null, price: null },
   },
 ];
 
 let currentQuestion = 0;
+let basePrice = 120000;
 
 const nextButton = document.querySelector(".order-section__button");
 
@@ -69,26 +101,32 @@ customData[currentQuestion].answer.forEach((data, index) => {
     "radio",
     "answer",
     index,
-    data
+    data.type
   );
 
-  const label = createLabelElement("order__label", data, data);
+  const label = createLabelElement("order__label", data.type, data.type);
 
   orderForm.appendChild(inputField);
   orderForm.appendChild(label);
 });
 
 nextButton.addEventListener("click", () => {
-  customData[currentQuestion].selected = document.querySelector(
+  let selectedAnswerIndex = document.querySelector(
     'input[name="answer"]:checked'
   ).value;
+  let sekectedPrice =
+    customData[currentQuestion].answer[selectedAnswerIndex].price;
+
+  customData[currentQuestion].selected.type = selectedAnswerIndex;
+  customData[currentQuestion].selected.price = sekectedPrice;
 
   currentQuestion++;
+
   orderImage.src = customData[currentQuestion].image;
   orderForm.innerHTML = "";
 
   option.innerText = customData[currentQuestion].option;
-  orderForm.appendChild(option);
+  orderForm.before(option);
 
   customData[currentQuestion].answer.forEach((data, index) => {
     const inputField = createInputElement(
@@ -96,10 +134,10 @@ nextButton.addEventListener("click", () => {
       "radio",
       "answer",
       index,
-      data
+      data.type
     );
 
-    const label = createLabelElement("order__label", data, data);
+    const label = createLabelElement("order__label", data.type, data.type);
 
     orderForm.appendChild(inputField);
     orderForm.appendChild(label);
@@ -112,7 +150,14 @@ nextButton.addEventListener("click", () => {
 const submitAnswer = () => {
   const orderSection = document.querySelector(".order-section");
   orderSection.innerHTML = "";
-  
+
+  orderSection.classList.add("column");
+
+  const orderImg = document.createElement("img");
+  orderImg.className = "order-section__summary-image";
+  orderImg.src = "../assets/images/iris-8.png";
+  orderSection.appendChild(orderImg);
+
   const orderSummary = document.createElement("div");
   orderSummary.className = "order-section__summary";
   orderSection.appendChild(orderSummary);
@@ -120,7 +165,11 @@ const submitAnswer = () => {
   customData.forEach((data) => {
     const selectedAnswer = document.createElement("p");
     selectedAnswer.className = "order-section__answer";
-    selectedAnswer.innerText = `${data.answer[data.selected]}`;
+
+    console.log(data);
+    console.log(data.selected.type);
+    console.log(data.answer[data.selected.type]);
+    selectedAnswer.innerText = `${data.answer[data.selected.type].type}`;
 
     const selectedTitle = document.createElement("h3");
     selectedTitle.className = "order-section__option";
@@ -128,11 +177,27 @@ const submitAnswer = () => {
     orderSummary.appendChild(selectedTitle);
     orderSummary.appendChild(selectedAnswer);
   });
+
+  const orderSummaryCta = document.createElement("div");
+  orderSummaryCta.className = "order-section__cta";
+  orderSummary.appendChild(orderSummaryCta);
+
+  let price = customData.reduce((acc, data) => {
+    return acc + data.selected.price;
+  }, basePrice);
+
+  const totalPrice = document.createElement("p");
+  totalPrice.className = "order-section__price";
+  totalPrice.innerText = `Total price 
+  ${(10 * price).toLocaleString()} NOK`;
+  orderSummaryCta.appendChild(totalPrice);
+
   const orderButton = document.createElement("button");
   orderButton.className = "button button--submit";
   orderButton.innerText = "Order";
   orderButton.addEventListener("click", () => {
     alert("Order has been placed");
   });
-  orderSection.appendChild(orderButton);
+
+  orderSummaryCta.appendChild(orderButton);
 };
