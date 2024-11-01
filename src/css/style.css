@@ -98,6 +98,15 @@ body {
   font-weight: bold;
 }
 
+.landing-customization__title-text {
+  color: #000;
+  width: 70%;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .landing-hero__text {
   font-size: 24px;
   font-weight: 500;
@@ -206,6 +215,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
+  margin-top: 46px;
 }
 
 .landing-customization__option::before {
@@ -237,244 +247,243 @@ body {
   width: 500px;
 }
 
-
-
 @media (max-width: 1900px) {
-    .landing-main {
-      width: 1440px;
-    }
-    
-    .landing-hero__video {
-        height: 850px;
-    }
-    .landing-hero__image {
-        
-        bottom: -170px;
-    }
+  .landing-main {
+    width: 1440px;
+  }
 
+  .landing-hero__video {
+    height: 850px;
+  }
+  .landing-hero__image {
+    bottom: -170px;
+  }
 }
 
-
-@media (max-width: 1440px) {
-
+@media (max-width: 1439px) {
   .landing-header {
     padding: 18px 24px;
   }
-    .landing-main {
-      width: 1024px;
-    }
+  .landing-main {
+    width: 1024px;
+  }
 
-    .landing-customization__title{
-      font-size: 36px;
-    }
-    
-    .landing-hero{
-        height: 370px;
-    }
-    
-    .landing-hero__video {
-        height: 735px;
-    }
+  .landing-customization__title {
+    font-size: 36px;
+  }
 
-    .landing-customization__picture{
-        width: 200px;
-    }
+  .landing-hero {
+    height: 370px;
+  }
 
-    .landing-hero__image {
-        
-        bottom: -120px;
-    }
+  .landing-hero__video {
+    height: 735px;
+  }
 
-    .landing-hero__title {
-        font-size: 40px;
-    }
-    
-    .landing-hero__button {
-      padding: 14px;
-      font-size: 16px;
-      
-    }
+  .landing-customization__picture {
+    width: 200px;
+  }
 
-    .landing-customization__text{
-      font-size: 20px;
-    }
+  .landing-hero__image {
+    bottom: -120px;
+  }
 
-    .landing-hero__text{
-        font-size: 18px;
-    }
+  .landing-hero__title {
+    font-size: 40px;
+  }
 
+  .landing-hero__button {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .landing-customization__title-text {
+    font-size: 22px;
+  }
+
+  .landing-customization__text {
+    font-size: 20px;
+  }
+
+  .landing-hero__text {
+    font-size: 18px;
+  }
 }
 
-@media (max-width: 1024px) {
-  
+@media (max-width: 1023px) {
   .landing-header {
     padding: 8px 14px;
   }
 
-  .landing-header__list{
+  .landing-header__list {
     display: none;
   }
-    .landing-main {
-      width: 768px;
-    }
-    
-    .landing-hero{
-        height: 270px;
-    }
-    
-    .landing-hero__video {
-        height: 625px;
-    }
+  .landing-main {
+    width: 768px;
+  }
 
-    .landing-hero__image {        
-        bottom: -60px;
-    }
+  .landing-hero {
+    height: 270px;
+  }
 
-    .landing-hero__title {
-        font-size: 32px;
-    }
-    
-    .landing-hero__button {
-      padding: 0 20px;
-      font-size: 14px;
-    }
-    .landing-hero__text{
-        font-size: 16px;
-    }
+  .landing-hero__video {
+    height: 625px;
+  }
 
-    .landing-customization__title{
-      font-size: 28px;
-    }
+  .landing-hero__image {
+    bottom: -60px;
+  }
 
-    .landing-customization__text{
-      font-size: 18px;
-    }
+  .landing-hero__title {
+    font-size: 32px;
+  }
 
-    .landing-customization__picture{
-        width: 150px;
-    }
+  .landing-hero__button {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+  .landing-hero__text {
+    font-size: 16px;
+  }
+
+  .landing-customization__title {
+    font-size: 28px;
+  }
+
+  .landing-customization__title-text {
+    font-size: 16px;
+  }
+  .landing-customization__text {
+    font-size: 18px;
+  }
+
+  .landing-customization__picture {
+    width: 150px;
+  }
 }
 
-@media (max-width: 768px) {
-  
+@media (max-width: 767px) {
   .landing-header {
     padding: 8px 14px;
   }
 
-  .landing-header__list{
+  .landing-header__list {
     display: none;
   }
-    .landing-main {
-      width: 630px;
-    }
-    
-    .landing-hero{
-        height: 180px;
-    }
-    
-    .landing-hero__video {
-        height: 500px;
-    }
+  .landing-main {
+    width: 630px;
+  }
 
-    .landing-hero__image {        
-        bottom: -40px;
-    }
+  .landing-hero {
+    height: 180px;
+  }
 
-    .landing-hero__title {
-        font-size: 24px;
-    }
+  .landing-hero__video {
+    height: 500px;
+  }
 
-    .landing-hero__cta{
-      margin-top: 25px;
-    }
-    
-    .landing-hero__button {
-      padding: 0 8px;
-      height: 34px;
-      font-size: 14px;
-    }
-    .landing-hero__text{
-        font-size: 16px;
-    }
+  .landing-hero__image {
+    bottom: -40px;
+  }
 
-    .landing-customization__title{
-      font-size: 22px;
-    }
+  .landing-hero__title {
+    font-size: 24px;
+  }
 
-    .landing-customization__text{
-      font-size: 16px;
-    }
+  .landing-hero__cta {
+    margin-top: 25px;
+  }
 
-    .landing-customization__picture{
-        width: 110px;
-    }
+  .landing-hero__button {
+    padding: 0 8px;
+    height: 34px;
+    font-size: 14px;
+  }
+  .landing-hero__text {
+    font-size: 16px;
+  }
+
+  .landing-customization__title {
+    font-size: 22px;
+  }
+
+  .landing-customization__title-text {
+    font-size: 12px;
+  }
+
+  .landing-customization__text {
+    font-size: 16px;
+  }
+
+  .landing-customization__picture {
+    width: 110px;
+  }
 }
 
 @media (max-width: 630px) {
-  
   .landing-header {
     padding: 8px 14px;
   }
 
-  .landing-header__list{
+  .landing-header__list {
     display: none;
   }
-    .landing-main {
-      width: 380px;
-      padding: 20px;
-      gap: 34px;
-    }
-    
-    .landing-hero{
-        height: 140px;
-    }
-    
-    .landing-hero__video {
-        height: 490px;
-    }
+  .landing-main {
+    width: 380px;
+    padding: 20px;
+    gap: 34px;
+  }
 
-    .landing-hero__image {        
-        bottom: -40px;
-    }
+  .landing-hero {
+    height: 140px;
+  }
 
-    .landing-hero__title {
-        font-size: 18px;
-    }
+  .landing-hero__video {
+    height: 490px;
+  }
 
-    .landing-hero__cta{
-      margin-top: 8px;
-    }
-    
-    .landing-hero__button {
-      padding: 0 8px;
-      height: 34px;
-      font-size: 14px;
-    }
-    .landing-hero__text{
-        font-size: 12px;
-    }
+  .landing-hero__image {
+    bottom: -40px;
+  }
 
-    .landing-customization__title{
-      font-size: 22px;
-    }
+  .landing-hero__title {
+    font-size: 18px;
+  }
 
-    .landing-customization__text{
-      font-size: 16px;
-    }
+  .landing-hero__cta {
+    margin-top: 8px;
+  }
 
-    .landing-customization__picture{
-        width: 70px;
-    }
-    .landing-customization__option::before {
-      bottom: -8px;
-    }
+  .landing-hero__button {
+    padding: 0 8px;
+    height: 34px;
+    font-size: 14px;
+  }
+  .landing-hero__text {
+    font-size: 12px;
+  }
 
-    .landing-hero__overlay {
-      margin-left: 20px;
-      width: 305px;
-    }
-    
-    .landing-hero__button--testdrive {
-      margin: unset;
-    }
+  .landing-customization__title {
+    font-size: 22px;
+  }
+
+  .landing-customization__text {
+    font-size: 16px;
+  }
+
+  .landing-customization__picture {
+    width: 70px;
+  }
+  .landing-customization__option::before {
+    bottom: -8px;
+  }
+
+  .landing-hero__overlay {
+    margin-left: 20px;
+    width: 305px;
+  }
+
+  .landing-hero__button--testdrive {
+    margin: unset;
+  }
 }
